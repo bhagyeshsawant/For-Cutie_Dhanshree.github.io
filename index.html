@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Dhanshree ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b0b1a;
+            transition: background 0.5s;
+            padding: 1rem;
+            overflow-x: hidden;
+        }
+
+        #page1 {
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 1s ease;
+            z-index: 10;
+            position: relative;
+        }
+
+        #page1 h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+        }
+
+        #page1 p {
+            color: #94a3b8;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 3.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+            color: #fff;
+        }
+        .btn-yes:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+        }
+
+        .btn-no {
+            background: #1e293b;
+            color: #94a3b8;
+            position: relative;
+            transition: all 0.12s ease;
+        }
+
+        #page2 {
+            display: none;
+            width: 100%;
+            max-width: 1100px;
+            padding: 2rem 1.5rem 4rem;
+            background: linear-gradient(145deg, #e0f2fe, #b8dff5);
+            border-radius: 3rem;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), inset 0 0 100px rgba(255, 255, 255, 0.2);
+            animation: fadeIn 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== FLOATING DECORATIONS ===== */
+        .floating {
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+            animation: floatAround 10s infinite alternate ease-in-out;
+            font-size: 2.5rem;
+            opacity: 0.4;
+        }
+        .floating:nth-child(1) {
+            top: 5%;
+            left: 3%;
+            animation-duration: 11s;
+            font-size: 3rem;
+        }
+        .floating:nth-child(2) {
+            top: 12%;
+            right: 5%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+            font-size: 2.8rem;
+        }
+        .floating:nth-child(3) {
+            bottom: 25%;
+            left: 5%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+            font-size: 3.5rem;
+        }
+        .floating:nth-child(4) {
+            bottom: 15%;
+            right: 3%;
+            animation-duration: 8s;
+            animation-delay: 0.5s;
+            font-size: 2.2rem;
+        }
+        .floating:nth-child(5) {
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-duration: 13s;
+            animation-delay: 3s;
+            font-size: 5rem;
+            opacity: 0.15;
+        }
+        .floating:nth-child(6) {
+            top: 20%;
+            left: 25%;
+            animation-duration: 10s;
+            animation-delay: 1.5s;
+            font-size: 2rem;
+        }
+        .floating:nth-child(7) {
+            bottom: 40%;
+            right: 20%;
+            animation-duration: 9.5s;
+            animation-delay: 2.5s;
+            font-size: 2.3rem;
+        }
+        .floating:nth-child(8) {
+            top: 60%;
+            left: 15%;
+            animation-duration: 11.5s;
+            animation-delay: 0.8s;
+            font-size: 1.8rem;
+        }
+        .floating:nth-child(9) {
+            top: 8%;
+            left: 45%;
+            animation-duration: 10.5s;
+            animation-delay: 1.2s;
+            font-size: 2.1rem;
+        }
+        .floating:nth-child(10) {
+            bottom: 8%;
+            left: 35%;
+            animation-duration: 9.2s;
+            animation-delay: 3.5s;
+            font-size: 2.6rem;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 2.5rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            color: #0b2a3e;
+            text-align: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .subhead {
+            text-align: center;
+            color: #1e4a6b;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* ===== PERSONAL LETTER ===== */
+        .letter {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            border-radius: 2rem;
+            margin: 1.5rem 0 2rem;
+            border-left: 6px solid #a855f7;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #0b2a3e;
+            text-align: center;
+            font-weight: 500;
+        }
+        .letter span {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ===== WISHES ===== */
+        .wishes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .wish-card {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0b2a3e;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            transition: transform 0.2s;
+            cursor: default;
+        }
+        .wish-card:hover {
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        /* ===== PHOTO GRID - 2 SLOTS ===== */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 600px;
+            margin: 2rem auto 2.5rem;
+        }
+
+        .photo-slot {
+            aspect-ratio: 1 / 1;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 1.8rem;
+            border: 3px dashed rgba(59, 130, 246, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #3b82f6;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+        .photo-slot:hover {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: #3b82f6;
+            transform: scale(1.02);
+        }
+        .photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.8rem;
+        }
+        .photo-slot .plus-sign {
+            font-size: 4rem;
+            color: #3b82f6;
+            font-weight: 300;
+        }
+        .photo-slot .upload-hint {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            font-size: 0.75rem;
+            color: #3b82f6;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 4px 12px;
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-weight: 600;
+        }
+        .photo-slot:hover .upload-hint {
+            opacity: 1;
+        }
+
+        /* ===== CLICKABLE HEARTS ===== */
+        .hearts-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .heart-btn {
+            background: rgba(255, 255, 255, 0.6);
+            border: none;
+            font-size: 3rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            position: relative;
+        }
+        .heart-btn:hover {
+            transform: scale(1.15);
+            background: rgba(255, 200, 200, 0.8);
+            border-color: #ff6b6b;
+        }
+        .heart-btn .hidden-msg {
+            display: none;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0b2a3e;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: max-content;
+            max-width: 250px;
+            white-space: normal;
+        }
+        .heart-btn:hover .hidden-msg {
+            display: block;
+        }
+
+        /* ===== GRATITUDE NOTES ===== */
+        .notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .note-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 1rem 1.8rem;
+            border-radius: 1.5rem;
+            font-size: 1rem;
+            color: #0b2a3e;
+            border-left: 5px solid #3b82f6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            max-width: 260px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .note-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ===== SPOTIFY EMBED ===== */
+        .song-container {
+            margin: 2rem 0;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        .song-container iframe {
+            width: 100%;
+            height: 80px;
+            border: none;
+            display: block;
+        }
+
+        /* ===== SIGNATURE ===== */
+        .signature {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0b2a3e;
+            border-top: 2px solid rgba(59, 130, 246, 0.2);
+            padding-top: 1.8rem;
+        }
+        .signature span {
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatAround {
+            0% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+            }
+            33% {
+                transform: translateY(-20px) rotate(5deg) scale(1.05);
+            }
+            66% {
+                transform: translateY(10px) rotate(-5deg) scale(0.95);
+            }
+            100% {
+                transform: translateY(-15px) rotate(3deg) scale(1.02);
+            }
+        }
+
+        @media (max-width: 600px) {
+            #page1 h1 {
+                font-size: 2rem;
+            }
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+            }
+            .btn-group {
+                gap: 1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .photo-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                max-width: 100%;
+            }
+            .floating {
+                font-size: 1.8rem !important;
+            }
+            .letter {
+                font-size: 0.95rem;
+                padding: 1.5rem;
+            }
+            .heart-btn {
+                font-size: 2.2rem;
+                padding: 0.3rem 0.8rem;
+            }
+            .photo-slot .plus-sign {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== PAGE 1 ===== -->
+    <div id="page1">
+        <h1>💙 Are you my best friend?</h1>
+        <p>There's only one right answer... 😉</p>
+        <div class="btn-group">
+            <button class="btn btn-yes" id="yesBtn">YES 🙌</button>
+            <button class="btn btn-no" id="noBtn">NO 😤</button>
+        </div>
+    </div>
+
+    <!-- ===== PAGE 2 ===== -->
+    <div id="page2">
+
+        <!-- FLOATING DECORATIONS -->
+        <div class="floating">💙</div>
+        <div class="floating">✨</div>
+        <div class="floating">🌸</div>
+        <div class="floating">⭐</div>
+        <div class="floating">💖</div>
+        <div class="floating">🌟</div>
+        <div class="floating">🌷</div>
+        <div class="floating">💜</div>
+        <div class="floating">✨</div>
+        <div class="floating">💝</div>
+
+        <div class="content">
+
+            <h2>🌟 For My Dearest Sister & Best Friend 🌟</h2>
+            <p class="subhead">
+                To <strong>Dhanshree Satardekar</strong> — 
+                my sister, my best friend, my safe space. 🤍
+            </p>
+
+            <!-- ===== PERSONAL LETTER ===== -->
+            <div class="letter">
+                💌 <strong>My Dearest Dhanshree,</strong><br /><br />
+                You're not my sister by blood, but by choice. You were there when no one else was.
+                You listened when I had no one to talk to. You believed in me when I didn't believe in myself.
+                You held my hand through the darkest days and celebrated with me in the brightest ones.
+                <br /><br />
+                You're my best friend, my sister, my strength, my peace.
+                I don't say it enough, but <strong>I love you</strong> — more than words can ever express.
+                <br /><br />
+                Thank you for being <em>you</em>. Thank you for being <em>mine</em>.
+                <br /><br />
+                <span>— Always & Forever, Shantaram Sawant 💙</span>
+            </div>
+
+            <!-- ===== WISHES ===== -->
+            <div class="wishes">
+                <span class="wish-card">🌸 You're my rock</span>
+                <span class="wish-card">💎 Rare & precious</span>
+                <span class="wish-card">🫂 Always there for me</span>
+                <span class="wish-card">✨ My safe space</span>
+                <span class="wish-card">💖 Forever grateful</span>
+                <span class="wish-card">🌷 You make life beautiful</span>
+            </div>
+
+            <!-- ===== PHOTO SLOTS - 2 SLOTS ===== -->
+            <p style="font-weight:600; color:#0b2a3e; margin-bottom:0.5rem; text-align:center;">
+                📸 Click any slot to add a photo:
+            </p>
+            <div class="photo-grid" id="photoGrid">
+                <!-- Photo Slot 1 -->
+                <div class="photo-slot" onclick="addPhoto(this)" id="slot1">
+                    <span class="plus-sign">➕</span>
+                    <span class="upload-hint">Click to add</span>
+                </div>
+                <!-- Photo Slot 2 -->
+                <div class="photo-slot" onclick="addPhoto(this)" id="slot2">
+                    <span class="plus-sign">➕</span>
+                    <span class="upload-hint">Click to add</span>
+                </div>
+            </div>
+
+            <!-- ===== CLICKABLE HEARTS ===== -->
+            <p style="font-weight:600; color:#0b2a3e; margin:1.5rem 0 0.8rem; text-align:center;">
+                💕 Hover over each heart to reveal a message:
+            </p>
+            <div class="hearts-container">
+                <button class="heart-btn">
+                    ❤️
+                    <span class="hidden-msg">You're my safe place 💙</span>
+                </button>
+                <button class="heart-btn">
+                    💖
+                    <span class="hidden-msg">Thank you for always listening 🙏</span>
+                </button>
+                <button class="heart-btn">
+                    💗
+                    <span class="hidden-msg">You make everything better 🌸</span>
+                </button>
+                <button class="heart-btn">
+                    💝
+                    <span class="hidden-msg">I'm so lucky to have you ✨</span>
+                </button>
+                <button class="heart-btn">
+                    ❤️‍🔥
+                    <span class="hidden-msg">You're my favorite human 💫</span>
+                </button>
+            </div>
+
+            <!-- ===== GRATITUDE NOTES ===== -->
+            <div class="notes">
+                <div class="note-card">💬 "You listened when no one else did."</div>
+                <div class="note-card">💬 "You believed in me when I didn't."</div>
+                <div class="note-card">💬 "You're the sister I chose & adore."</div>
+                <div class="note-card">💬 "Thank you for every hug, every laugh."</div>
+                <div class="note-card">💬 "My heart is full because of you."</div>
+                <div class="note-card">💬 "You are my strength, Dhanshree."</div>
+            </div>
+
+            <!-- ===== SONG EMBED ===== -->
+            <div class="song-container">
+                <iframe 
+                    src="https://open.spotify.com/embed/track/7eQl3Yqv35ioqUfveKHitE?utm_source=generator" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- ===== SIGNATURE ===== -->
+            <div class="signature">
+                With all my gratitude & love, <br />
+                <span>💙 Shantaram Sawant 💙</span>
+                <br />
+                <span style="font-size:0.9rem; -webkit-text-fill-color:#1e4a6b; background:none;">
+                    (Dhanshree Satardekar — you're the best! 🙏)
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // ===== NO BUTTON: runs away! =====
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const page1 = document.getElementById('page1');
+        const page2 = document.getElementById('page2');
+
+        noBtn.addEventListener('mouseover', function() {
+            const maxX = window.innerWidth - 150;
+            const maxY = window.innerHeight - 80;
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+            noBtn.style.zIndex = '999';
+        });
+
+        noBtn.addEventListener('click', function() {
+            const maxX = window.innerWidth - 150;
+            const maxY = window.innerHeight - 80;
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = (Math.random() * maxX) + 'px';
+            noBtn.style.top = (Math.random() * maxY) + 'px';
+        });
+
+        // ===== YES BUTTON: reveal website =====
+        yesBtn.addEventListener('click', function() {
+            page1.style.display = 'none';
+            page2.style.display = 'block';
+            document.body.style.background = '#b8dff5';
+            // Confetti pop
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    const pop = document.createElement('div');
+                    const emojis = ['🎉', '💙', '💖', '🌸', '✨', '⭐', '🎈', '💝', '🌟'];
+                    pop.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    pop.style.position = 'fixed';
+                    pop.style.fontSize = (2 + Math.random() * 3) + 'rem';
+                    pop.style.left = Math.random() * 100 + 'vw';
+                    pop.style.top = Math.random() * 100 + 'vh';
+                    pop.style.pointerEvents = 'none';
+                    pop.style.zIndex = '9999';
+                    pop.style.animation = 'fadeIn 0.6s ease forwards';
+                    document.body.appendChild(pop);
+                    setTimeout(() => pop.remove(), 2500);
+                }, i * 150);
+            }
+        });
+
+        // ===== PHOTO UPLOAD FUNCTION =====
+        function addPhoto(slot) {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(ev) {
+                        // Clear the slot and add the image
+                        slot.innerHTML = `<img src="${ev.target.result}" alt="photo" />`;
+                        // Re-add the upload hint
+                        const hint = document.createElement('span');
+                        hint.className = 'upload-hint';
+                        hint.textContent = 'Click to change';
+                        slot.appendChild(hint);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            };
+            input.click();
+        }
+
+        // ===== OPTIONAL: Auto-load photos from folder =====
+        // To use this, create an "images" folder and add your photos as:
+        // photo1.jpg, photo2.jpg
+        // Then uncomment the code below:
+        
+                function loadPhotosFromFolder() {
+            const slots = document.querySelectorAll('.photo-slot');
+            const photoFiles = ['photo1.jpg', 'photo2.jpg'];
+            for (let i = 0; i < slots.length; i++) {
+                const imgPath = `images/${photoFiles[i]}`;
+                fetch(imgPath)
+                    .then(response => {
+                        if (response.ok) {
+                            slots[i].innerHTML = `<img src="${imgPath}" alt="Photo ${i+1}" />
+                                                   <span class="upload-hint">Click to change</span>`;
+                        }
+                    })
+                    .catch(() => {
+                        // Photo doesn't exist, keep the plus sign
+                    });
+            }
+        }
+        // Call this function when page loads
+        loadPhotosFromFolder();
+    </script>
+
+</body>
+</html>
